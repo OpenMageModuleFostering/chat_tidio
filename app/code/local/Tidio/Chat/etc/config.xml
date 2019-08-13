@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <modules>
+        <Tidio_Chat>
+            <version>0.1</version>
+        </Tidio_Chat>
+    </modules>
+
+    <frontend>
+        <layout>
+            <updates>
+                <chat>
+                    <file>tidio_chat.xml</file>
+                </chat>
+            </updates>
+        </layout>
+    </frontend>
+
+    <global>
+        <helpers>
+            <chat>
+                <class>Tidio_Chat_Helper</class>
+            </chat>
+        </helpers>
+
+        <resources>
+            <chat_setup>
+                <setup>
+                    <module>Tidio_Chat</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </chat_setup>
+
+            <chat_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </chat_write>
+
+            <chat_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </chat_read>
+
+            <tidio_module_setup>
+                <setup>
+                    <module>Tidio_Module</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </tidio_module_setup>
+        </resources>
+
+        <blocks>
+            <adminhtml>
+                <rewrite>
+                    <page_menu>Tidio_Chat_Block_Adminhtml_Menu</page_menu>
+                </rewrite>
+            </adminhtml>
+
+            <chat>
+                <class>Tidio_Chat_Block</class>
+            </chat>
+        </blocks>
+
+        <events>
+            <adminhtml_block_html_before>
+                <observers>
+                    <tidio_chat_load_model_observer>
+                        <type>singleton</type>
+                        <class>Tidio_Chat_Model_Observer</class>
+                        <method>hookToAdminLoad</method>
+                    </tidio_chat_load_model_observer>
+                </observers>
+            </adminhtml_block_html_before>
+
+        </events>
+
+    </global>
+
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <chat_section translate="title" module="chat">
+                                            <title>Chat</title>
+                                            <sort_order>100</sort_order>
+                                        </chat_section>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+
+    </adminhtml>
+
+</config>

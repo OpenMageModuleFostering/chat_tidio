@@ -1,0 +1,40 @@
+<config>
+    <tabs>
+        <chat_tab translate="label" module="chat">
+            <label>Tidio Extensions</label>
+            <sort_order>100</sort_order>
+        </chat_tab>
+    </tabs>
+
+    <sections>
+        <chat_section translate="label" module="chat">
+            <label>Tidio Chat Options</label>
+            <tab>chat_tab</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <chat_group translate="label" module="chat">
+                    <label>Tidio Chat Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <tidio_enable translate="label">
+                            <label>Enable extension: </label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </tidio_enable>
+                    </fields>
+                </chat_group>
+            </groups>
+        </chat_section>
+    </sections>
+</config>
