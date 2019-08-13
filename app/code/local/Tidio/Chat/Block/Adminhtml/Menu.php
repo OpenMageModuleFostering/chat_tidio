@@ -25,7 +25,7 @@ class Tidio_Chat_Block_Adminhtml_Menu extends Mage_Adminhtml_Block_Page_Menu
             $config->saveConfig(self::XML_PATH_EXTENSION_PRIVATE_KEY, $privateKey);
         }
 
-        $extEnabled = (int) Mage::getStoreConfig(self::XML_PATH_EXTENSION_ENABLED);
+        $extEnabled = true;//(int) Mage::getStoreConfig(self::XML_PATH_EXTENSION_ENABLED);
         if ($extEnabled && ($privateKey != '')) {
             $chatUrl = "'http://external.tidiochat.com/access?privateKey=$privateKey'";
             $parentArr['tidio_chat'] = array(
