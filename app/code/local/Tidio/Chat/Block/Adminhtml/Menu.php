@@ -15,6 +15,11 @@ class Tidio_Chat_Block_Adminhtml_Menu extends Mage_Adminhtml_Block_Page_Menu
         $publicKey = Mage::getStoreConfig(self::XML_PATH_EXTENSION_PUBLIC_KEY);
         $privateKey = Mage::getStoreConfig(self::XML_PATH_EXTENSION_PRIVATE_KEY);
 
+        if (Mage::getSingleton('core/session')->getPrivateKey() != '') {
+            $publicKey = Mage::getSingleton('core/session')->getPublicKey();
+            $privateKey = Mage::getSingleton('core/session')->getPrivateKey();
+        }
+
         if ((trim($publicKey) == '') || (trim($privateKey) == '')) {
             $keys = $this->_getKeys();
             $publicKey = $keys['public_key'];
@@ -23,6 +28,9 @@ class Tidio_Chat_Block_Adminhtml_Menu extends Mage_Adminhtml_Block_Page_Menu
             $config = new Mage_Core_Model_Config();
             $config->saveConfig(self::XML_PATH_EXTENSION_PUBLIC_KEY, $publicKey);
             $config->saveConfig(self::XML_PATH_EXTENSION_PRIVATE_KEY, $privateKey);
+
+            Mage::getSingleton('core/session')->setPrivateKey($privateKey);
+            Mage::getSingleton('core/session')->setPublicKey($publicKey);
         }
 
         $extEnabled = true;//(int) Mage::getStoreConfig(self::XML_PATH_EXTENSION_ENABLED);

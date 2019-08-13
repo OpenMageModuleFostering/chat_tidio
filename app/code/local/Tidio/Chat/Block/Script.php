@@ -16,6 +16,10 @@ class Tidio_Chat_Block_Script extends Mage_Core_Block_Template
         $extEnabled = (int) Mage::getStoreConfig(self::XML_PATH_EXTENSION_ENABLED);
         $publicKey = Mage::getStoreConfig(self::XML_PATH_EXTENSION_PUBLIC_KEY);
 
+        if (!$publicKey && (Mage::getSingleton('core/session')->getPublicKey() != '')) {
+            $publicKey = Mage::getSingleton('core/session')->getPublicKey();
+        }
+
         if ($extEnabled && (trim($publicKey) != '')) {
             return true;
         }
@@ -25,6 +29,11 @@ class Tidio_Chat_Block_Script extends Mage_Core_Block_Template
 
     public function getPublicKey()
     {
-        return Mage::getStoreConfig(self::XML_PATH_EXTENSION_PUBLIC_KEY);
+        $publicKey = Mage::getStoreConfig(self::XML_PATH_EXTENSION_PUBLIC_KEY);
+        if (!$publicKey && (Mage::getSingleton('core/session')->getPublicKey() != '')) {
+            $publicKey = Mage::getSingleton('core/session')->getPublicKey();
+        }
+
+        return $publicKey;
     }
 }
