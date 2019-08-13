@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>chat_tidio</name>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <stability>stable</stability>
     <license>GNU G eneral Public License ( GPL )</license>
     <channel>community</channel>
@@ -10,9 +10,9 @@
     <description>Description </description>
     <notes>Notes </notes>
     <authors><author><name>Tytus Go&#x142;as</name><user>tytustytus</user><email>tytus@tidio.net</email></author></authors>
-    <date>2014-09-08</date>
-    <time>10:52:48</time>
-    <contents><target name="magelocal"><dir name="Tidio"><dir name="Chat"><dir name="Block"><dir name="Adminhtml"><file name="Menu.php" hash="05b8d87e2bda65bc7f1e9cd2a9b621d9"/></dir><file name="Script.php" hash="3fdcc9d43158c61fd9c422857a877874"/></dir><dir name="Helper"><file name="Data.php" hash="4c45ffbb6ea2d5a043f7203842e2c079"/></dir><dir name="etc"><file name="config.xml" hash="835fc57ee214b942d59d0309eab31d1b"/><file name="system.xml" hash="ae343f9c2378f7e99252f8fb57b5f6a0"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Tidio_Chat.xml" hash="9788abdf12bd16ab9f6a83a908a05d31"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="tidio_chat.xml" hash="d969c4490a190e2127fd8e7caa5bf294"/></dir><dir name="template"><dir name="tidiochat"><file name="script.phtml" hash="b02b8e0f7bd476473eee0a0453f3491b"/></dir></dir></dir></dir></dir></target></contents>
+    <date>2014-09-09</date>
+    <time>07:15:09</time>
+    <contents><target name="magelocal"><dir name="Tidio"><dir name="Chat"><dir name="Block"><dir name="Adminhtml"><file name="Menu.php" hash="05b8d87e2bda65bc7f1e9cd2a9b621d9"/></dir><file name="Script.php" hash="0339bde781af5fb88321881bf0a20e04"/></dir><dir name="Helper"><file name="Data.php" hash="4c45ffbb6ea2d5a043f7203842e2c079"/></dir><dir name="etc"><file name="config.xml" hash="835fc57ee214b942d59d0309eab31d1b"/><file name="system.xml" hash="ae343f9c2378f7e99252f8fb57b5f6a0"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Tidio_Chat.xml" hash="9788abdf12bd16ab9f6a83a908a05d31"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="tidio_chat.xml" hash="d969c4490a190e2127fd8e7caa5bf294"/></dir><dir name="template"><dir name="tidiochat"><file name="script.phtml" hash="b2e7736cecece8d6e8aea309484ceed4"/></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

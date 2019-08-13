@@ -36,4 +36,10 @@ class Tidio_Chat_Block_Script extends Mage_Core_Block_Template
 
         return $publicKey;
     }
+
+    public function getProtocol()
+    {
+        $isSecure = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || $_SERVER['SERVER_PORT'] == 443;
+        return $isSecure ? 'https' : 'http';
+    }
 }
