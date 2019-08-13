@@ -69,15 +69,6 @@
         </blocks>
 
         <events>
-            <adminhtml_block_html_before>
-                <observers>
-                    <tidio_chat_load_model_observer>
-                        <type>singleton</type>
-                        <class>Tidio_Chat_Model_Observer</class>
-                        <method>hookToAdminLoad</method>
-                    </tidio_chat_load_model_observer>
-                </observers>
-            </adminhtml_block_html_before>
 
         </events>
 
