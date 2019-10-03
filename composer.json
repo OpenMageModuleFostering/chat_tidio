@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/chat_tidio",
+    "name": "OpenMageModuleFostering\/chat_tidio",
     "type": "magento-module",
     "license": "GNU-G-eneral-Public-License-(-GPL-)",
     "homepage": "",
     "description": "Summary ",
     "authors": [
-    {
-        "name": "Tytus Go\u0142as",
-        "email": "tytus@tidio.net"
-    }
-],
+        {
+            "name": "Tytus Go\u0142as",
+            "email": "tytus@tidio.net"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
